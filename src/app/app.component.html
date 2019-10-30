@@ -1,0 +1,8 @@
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-sm-6">
+      <app-google-places (setAddress)="getAddress($event)" (okClickEmitter)="selectAddress($event)" [errorMessage]="errorMessage" [buttonClass]="buttonClass" [validState]="validState" adressType="geocode" *ngIf="!clicked"></app-google-places>
+      <app-selected-address (goBackEmitter)="goBackInit()" [selectedAddress]="selectedAddressProps" *ngIf="clicked && validState"></app-selected-address>
+    </div>
+  </div>
+</div>

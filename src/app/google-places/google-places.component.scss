@@ -1,0 +1,36 @@
+.error-message {
+  color:red;
+  margin-top:5px;
+  font-size:13px;
+}
+.box div input.form-control{
+  box-sizing:border-box;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.box div {
+  position: relative;
+}
+
+.box div label {
+  position: absolute;
+  top:7px;
+  pointer-events: none;
+  left:10px;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.box input.form-control:focus ~ label,
+.box input.form-control:valid ~ label{
+  top: -18px;
+  left:0;
+  font-size:12px;
+  font-weight: bold;
+}
